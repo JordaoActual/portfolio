@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body >
+    <!-- <p id="demo">    </p> -->
+    <p class="exemplo"></p>
+    <p class="exemplo"></p>
+    <p class="exemplo"></p>
+    <div class="exemplo"></div>
+
+    <select name="" id="select" onchange="mudou()">
+
+        <option value="opcao1">Opção 1</option>
+        <option value="opcao2">Opção 2</option>
+        <option value="opcao3">Opção 3</option>
+    </select>
+ 
+    <input type="text" id="input" onchange="mudou()">
+
+    <!-- <h1 onclick= "this.innerHTML = 'OBRIGADO '"> Clique aqui</h1> -->
+
+    <h1 id="demo1" onmouseover="funcao1(this)"  onmouseout="funcao2(this)">Passe o mouse aqui</h1>
+    <h1 id="demo" onclick="funcao0()"> Voltar</h1>
+    <script> 
+
+
+        
+    
+        //buscando elemento pelo id
+        // document.getElementById('demo').innerHTML = "meu texto de Exemplo";
+
+
+        //     // aqui busca pelo nome da classe
+        //    console.log(document.getElementsByClassName('exemplo'));
+        //    var x = (document.getElementsByClassName('exemplo'));
+        //    x[0].innerHTML = "texto1";
+        //    x[1].innerHTML = "texto2";    
+        //    x[2].innerHTML = "texto3";
+
+        //para buscar por um tipop de class
+        // var y = (document.querySelectorAll('div.exemplo'))
+        //altera a propriedade do elemento
+        // document.getElementById('imagem').alt = "texto alterado"
+
+
+        function funcao1(elemento) {
+           elemento.innerHTML =     'Passou o mouse'
+        }
+        function funcao2(elemento) {
+           elemento.innerHTML =     'Tirou o mouse'
+        }
+
+
+        // function funcao() {
+        //     document.getElementById('demo').innerHTML = "texto alterado";
+            
+        // }
+
+        function mudou() {
+           alert('Opção alterada')
+        }   
+
+        function funcao0() {
+          //  alert('aaaaaaaaaaaaaaaaa')
+            document.getElementById('demo1').innerHTML = "Passe o mouse aqui";
+        }     
+
+        document.getElementById('demo1').onclick = funcao0
+
+    </script>
+
+
+</body>
+
+</html>
